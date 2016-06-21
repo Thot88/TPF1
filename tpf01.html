@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.purple-red.min.css" />
+    <link href="css/tpf01.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="container">
+        <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h1 class="mdl-card__title-text">Calculateur de dépense en café pour une semaine</h1>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <form action="#">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="tbx-lastname">
+                                <label class="mdl-textfield__label" for="tbx-lastname">Nom</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="tbx-firstname">
+                                <label class="mdl-textfield__label" for="tbx-firstname">Prénom</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="tbx-cofee-per-week">
+                                <label class="mdl-textfield__label" for="tbx-cofee-per-week">Nombre de café bu en moyenne par jour</label>
+                                <span class="mdl-textfield__error">Le nombre de cafés bus en moyenne par jour doit être un nombre.</span>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="[1-7]+" id="tbx-nb-days">
+                                <label class="mdl-textfield__label" for="tbx-nb-days">Nombre de jours travaillés par semaine</label>
+                                <span class="mdl-textfield__error">Un employer doit travailler entre 1 et 7 jour(s).</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="btn-compute">Calculer!</a>
+                <div class="mdl-layout-spacer"></div>
+                <span id="result"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script src="js/tpf01.min.js"></script>
+    <script src="js/btn-calculate.js"></script>
+</body>
+</html>
